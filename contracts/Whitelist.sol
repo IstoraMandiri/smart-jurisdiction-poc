@@ -3,7 +3,7 @@ pragma solidity ^0.4.16;
 import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
 /// @title Whitelist
-/// @dev A simple ownable registry mapping addressess to a bool
+/// @notice A simple ownable registry mapping addressess to a bool
 /// @author Chris Hitchcott
 
 contract Whitelist is Ownable {
@@ -11,7 +11,8 @@ contract Whitelist is Ownable {
   // TODO events
   mapping(address => bool) public whitelist;
 
-  /// @dev Updates the registry
+  /// @notice Updates the registry
+  /// @dev Can only be called by admin
   /// @param _address address Address to update
   /// @param _value bool New value
   /// @return _success bool Transaction was successful

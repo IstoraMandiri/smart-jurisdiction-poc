@@ -5,7 +5,7 @@ import './Whitelist.sol';
 
 
 /// @title Whitelist Interface
-/// @dev Helper methods for calling external whitelist contract
+/// @notice Helper methods for calling external whitelist contract
 /// @author Chris Hitchcott
 
 contract HasWhitelists is Ownable {
@@ -17,21 +17,22 @@ contract HasWhitelists is Ownable {
     _;
   }
 
-  /// @dev Returns whether an address is whitelisted or not
-  /// @notice Returns true or false if whitelist exists, throws if whitelist is not registered
-  /// @param _whitelist bytes32 The name of the whitelist
-  /// @param _address address The address to query
-  /// @return _value bool Whether the user is whitelisted
+  /// @notice Returns whether an address is whitelisted or not
+  /// @dev Returns true or false if whitelist exists, throws if whitelist is not registered
+  /// @param _whitelist The name of the whitelist
+  /// @param _address The address to query
+  /// @return _value Whether the user is whitelisted
   function getWhitelisted(bytes32 _whitelist, address _address) public returns (bool _value) {
     require(whitelists[_whitelist] > 0x0);
     Whitelist whitelist = Whitelist(whitelists[_whitelist]);
     return whitelist.whitelist(_address);
   }
 
-  /// @dev Register (or unregister) a new whitelist
-  /// @param _whitelist bytes32 The name of the whitelist
-  /// @param _address address The contract address of the whitelist
-  /// @return _success bool Transaction was successful
+  /// @notice Register (or unregister) a new whitelist
+  /// @dev Can only be called by admin
+  /// @param _whitelist The name of the whitelist
+  /// @param _address The contract address of the whitelist
+  /// @return _success Transaction was successful
   function registerWhitelist(bytes32 _whitelist, address _address) public onlyOwner returns (bool _success) {
     whitelists[_whitelist] = _address;
     return true;

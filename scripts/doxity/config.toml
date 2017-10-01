@@ -1,0 +1,13 @@
+linkPrefix = ""
+name = "sj-poc"
+version = "1.0.0"
+description = "A simple smart jurisdiction proof of concept"
+author = "Chris Hitchcott"
+buildTime = 2017-10-01T09:00:52.034Z
+target = "scripts/doxity"
+src = "contracts/*"
+dir = "pages/docs"
+source = "https://github.com/DigixGlobal/doxity-gatsby-starter-project/archive/a4886b7a7a04c018ac04fed3125d7d4785e74bed.tar.gz"
+out = "docs"
+
+[interaction]
