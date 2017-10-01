@@ -4,25 +4,20 @@ import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
 
 /// @title Whitelist
 /// @dev A simple ownable registry mapping addressess to a bool
+/// @author Chris Hitchcott
 
 contract Whitelist is Ownable {
 
   // TODO events
-  mapping(address => bool) whitelist;
+  mapping(address => bool) public whitelist;
 
   /// @dev Updates the registry
-  /// @param _address Address to update
-  /// @param _value New value
+  /// @param _address address Address to update
+  /// @param _value bool New value
+  /// @return _success bool Transaction was successful
   function set(address _address, bool _value) onlyOwner public returns (bool _success) {
     whitelist[_address] = _value;
     return true;
-  }
-
-  /// @dev Updates the registry
-  /// @param _address Address being queried
-  /// @return _value The value of the entry
-  function get(address _address) public constant returns (bool _value) {
-    return whitelist[_address];
   }
 
   // TODO enable the following for conveneince

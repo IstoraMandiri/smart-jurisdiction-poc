@@ -6,5 +6,11 @@
     "artifacts": true,
     "contract": true,
     "web3": true
-  }
+  },
+  "rules": {
+    "func-names": [0],
+    "prefer-arrow-callback": [0],
+    "max-len": [0],
+    "no-underscore-dangle": [0]
+  },
 }

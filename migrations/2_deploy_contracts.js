@@ -13,7 +13,7 @@ module.exports = function deployContracts(deployer) {
     const managersWhitelist = await Whitelist.new();
     const tradersWhitelist = await Whitelist.new();
     await factory.configureMaxInitialBalance(1e18);
-    await factory.conigureTraderWhitelist(tradersWhitelist.address);
+    await factory.configureTraderWhitelist(tradersWhitelist.address);
     await factory.registerWhitelist('manager', managersWhitelist.address);
     await Promise.all([
       managersWhitelist.set(accounts[1], true),

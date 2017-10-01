@@ -1,0 +1,142 @@
+{
+  "contract_name": "TestHasWhitelists",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_whitelist",
+          "type": "bytes32"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "getWhitelisted",
+      "outputs": [
+        {
+          "name": "_value",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_whitelist",
+          "type": "bytes32"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "testIsWhitelisted",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_whitelist",
+          "type": "bytes32"
+        },
+        {
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "registerWhitelist",
+      "outputs": [
+        {
+          "name": "_success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "whitelists",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040525b60008054600160a060020a03191633600160a060020a03161790555b5b6103db806100316000396000f300606060405236156100755763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630e2d20a0811461007a578063194cc58e146100b05780638da5cb5b146100e6578063ba7c94aa14610115578063d7ec30db1461014b578063f2fde38b1461017d575b600080fd5b341561008557600080fd5b61009c600435600160a060020a036024351661019e565b604051901515815260200160405180910390f35b34156100bb57600080fd5b61009c600435600160a060020a0360243516610269565b604051901515815260200160405180910390f35b34156100f157600080fd5b6100f9610290565b604051600160a060020a03909116815260200160405180910390f35b341561012057600080fd5b61009c600435600160a060020a036024351661029f565b604051901515815260200160405180910390f35b341561015657600080fd5b6100f96004356102fb565b604051600160a060020a03909116815260200160405180910390f35b341561018857600080fd5b61019c600160a060020a0360043516610316565b005b6000828152600160205260408120548190600160a060020a03168190116101c457600080fd5b5060008381526001602052604080822054600160a060020a0316918291639b19251a91869151602001526040517c010000000000000000000000000000000000000000000000000000000063ffffffff8416028152600160a060020a039091166004820152602401602060405180830381600087803b151561024557600080fd5b6102c65a03f1151561025657600080fd5b50505060405180519250505b5092915050565b60008282610277828261019e565b151561028257600080fd5b600192505b5b505092915050565b600054600160a060020a031681565b6000805433600160a060020a039081169116146102bb57600080fd5b506000828152600160208190526040909120805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0384161790555b5b92915050565b600160205260009081526040902054600160a060020a031681565b60005433600160a060020a0390811691161461033157600080fd5b600160a060020a038116151561034657600080fd5b600054600160a060020a0380831691167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0383161790555b5b505600a165627a7a7230582074a65f728a2701229511c8f0a8c39a4fedd38eedc8709a6c7351ab769d0cd6d80029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1506847475911
+}
